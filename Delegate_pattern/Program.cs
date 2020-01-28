@@ -41,6 +41,10 @@ namespace Delegate_pattern
             Console.WriteLine(sinc(0.1));
             Console.WriteLine(sinc(0.0));
 
+            Func<int, int, int> act2 = (z, w) => (z + w) > 10 ? (z + w) : (-1*(z+w));
+            
+            Console.WriteLine(act2(5,20));
+            Console.WriteLine(act2(5, 4));
 
             Console.Read();
         }
