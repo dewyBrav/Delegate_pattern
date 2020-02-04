@@ -21,28 +21,21 @@ namespace Delegate_pattern
             bool ist = func(k);
             Console.WriteLine($" {ist}  is {k.ToString()}");
 
-
             Predicate<int> isPositive = delegate (int x) { return x > 0; };  //если условие соблюдено true
-            Console.WriteLine(isPositive(20));
-            Console.WriteLine(isPositive(-20));
+            Console.WriteLine(isPositive(30));
+            Console.WriteLine(isPositive(-30));
 
             Func<string, int> func2 = varr;
            
             int x1 = func2.Invoke("Hello");
             int x2 = func2.Invoke("Hell");
-
             Console.WriteLine($"x={x1}, x1={x2}");
 
-
-
-
             double sinc(double x) => x != 0.0 ? Math.Sin(x) / x : 1;
-
             Console.WriteLine(sinc(0.1));
             Console.WriteLine(sinc(0.0));
 
             Func<int, int, int> act2 = (z, w) => (z + w) > 10 ? (z + w) : (-1*(z+w));
-            
             Console.WriteLine(act2(5,20));
             Console.WriteLine(act2(5, 4));
 
