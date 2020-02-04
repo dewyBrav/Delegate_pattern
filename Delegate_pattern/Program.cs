@@ -39,6 +39,8 @@ namespace Delegate_pattern
             Console.WriteLine(act2(5,20));
             Console.WriteLine(act2(5, 4));
 
+
+            Console.WriteLine(String.Format("END"));
             Console.Read();
         }
 
